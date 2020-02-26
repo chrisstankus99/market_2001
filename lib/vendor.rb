@@ -12,6 +12,7 @@ class Vendor
   end
 
   def stock(item, amount)
-    inventory[item] = amount
+    inventory[item] = 0 if inventory[item].nil?
+    inventory[item] += amount
   end
 end
