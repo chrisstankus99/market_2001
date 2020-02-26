@@ -15,4 +15,13 @@ class Vendor
     inventory[item] = 0 if inventory[item].nil?
     inventory[item] += amount
   end
+
+  def potential_revenue
+    potential_revenue = 0
+    inventory.each do |key, value|
+      price = key.price.delete("$0").to_f
+      potential_revenue += (price * value)
+    end
+    potential_revenue
+  end
 end
