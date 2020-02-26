@@ -16,6 +16,8 @@ class VendorTest < Minitest::Test
   end
 
   def test_attributes
+    assert_equal "Rocky Mountain Fresh", @vendor.name
+    assert_equal ({}), @vendor.inventory
   end
 end
 # pry(main)> vendor = Vendor.new("Rocky Mountain Fresh")
