@@ -5,4 +5,13 @@ class Vendor
     @name = name
     @inventory = {}
   end
+
+  def check_stock(item)
+    inventory.default = 0
+    inventory[item]
+  end
+
+  def stock(item, amount)
+    inventory[item] = amount
+  end
 end
