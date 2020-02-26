@@ -25,4 +25,11 @@ class Market
     end
     vendors_that_sell
   end
+
+  # def total_inventory
+  #   @vendors.reduce({}) do |inv, vendor|
+  #
+  #     end
+  #   end
+  # end
 end

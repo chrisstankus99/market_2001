@@ -49,23 +49,6 @@ class VendorTest < Minitest::Test
     @vendor3.stock(@item1, 65)
     assert_equal 29.75, @vendor1.potential_revenue
     assert_equal 345.00, @vendor2.potential_revenue
+    assert_equal 48.75, @vendor3.potential_revenue
   end
 end
-
-# pry(main)> vendor1.potential_revenue
-# #=> 29.75
-#
-# pry(main)> vendor2.potential_revenue
-# #=> 345.00
-#
-# pry(main)> vendor3.potential_revenue
-# #=> 48.75
-# ```
-# A Vendor will be able to calculate their `potential_revenue` - the sum of all their items' price * quantity.
-#
-# A Market is responsible for keeping track of Vendors. It should have a method called `vendor_names` that returns an array of all the Vendor's names.
-#
-# Additionally, the Market should have a method called `vendors_that_sell` that takes an argument of an item represented as a String. It will return a list of Vendors that have that item in stock.
-#
-# Use TDD to create a `Market` class that responds to the following interaction pattern:
-#
